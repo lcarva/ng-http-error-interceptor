@@ -9,14 +9,14 @@ module.exports = function(grunt) {
       },
       build: {
         src: 'src/<%= pkg.name %>.js',
-        dest: 'build/<%= pkg.name %>.js'
+        dest: 'src/<%= pkg.name %>.min.js'
       }
     },
     jasmine : {
       src: [
         'bower_components/angular/angular.js',
         'bower_components/angular-mocks/angular-mocks.js',
-        'src/**/*.js'
+        'src/<%= pkg.name %>.js'
       ],
       options : {
         specs : 'spec/**/*.js'

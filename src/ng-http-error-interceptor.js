@@ -15,6 +15,7 @@
       return {
         responseError: function(rejection) {
           if (rejection.config.httpErrorInterceptor !== false) {
+            $rootScope.$broadcast('http-error', rejection);
             $rootScope.$broadcast('http-error-' + rejection.status, rejection);
           }
           return $q.reject(rejection);
