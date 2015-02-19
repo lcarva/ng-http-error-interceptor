@@ -5,16 +5,19 @@ Manual
 ------
 This interceptor broadcasts two events upon error responses:
 - `http-error` - triggered regardless of HTTP response status code.
+
     $rootScope.$on('http-error', function(response) {
       // Executes on every HTTP response error.
     });
 
 - `http-error-XXX` - triggered only if HTTP response status code matches XXX (404, 500, etc).
+
     $rootScope.$on('http-error-403', function(response) {
       // Executes on every HTTP response that errors due to a 403 status code.
     });
 
 To bypass interceptor, set `httpErrorInterceptor` flag to false.
+
     $http.get('/spam', { httpErrorInterceptor: false });
 
 Examples
