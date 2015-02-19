@@ -17,6 +17,6 @@ This interceptor broadcasts two events upon error responses:
 To bypass interceptor, set `httpErrorInterceptor` flag to false.
     $http.get('/spam', { httpErrorInterceptor: false });
 
-Usage
------
+Examples
+--------
 See [specs](https://github.com/lcarva/ng-http-error-interceptor/blob/master/spec/ng-http-error-interceptor-spec.js) for usage example.
