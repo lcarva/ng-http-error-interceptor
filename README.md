@@ -1,3 +1,7 @@
+# Deprecated
+
+This repository is no longer maintained.
+
 # ng-http-error-interceptor
 Trigger events on any response error for Angular.
 
